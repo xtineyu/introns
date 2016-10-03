@@ -70,7 +70,7 @@ class Exon:
 def main():
     # genes = {}
 
-    with open('Equus_caballus_protein_coding_gene_tx_exon.gtf') as f:
+    with open('dummy.gtf') as f:
 
         gene = None
         transcript = None
