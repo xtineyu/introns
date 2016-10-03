@@ -28,7 +28,7 @@ class Gene:
         for i in range(len(t.exons) - 1):
             place=t.list_index()
             intronTupple = (self.chromosome_id, t.transcript_id, int(t.exons[i].end)+1, int(t.exons[i+1].start)-1, place)
-            intronTuppleStr=intronTupple[0]+'\t'+intronTupple[1][16:-1]+'_intron'+'intronTupple[4]'+'\t'+intronTupple[1][16:-1]+'\t'+str(intronTupple[2])+'\t'+str(intronTupple[3])+'\n'
+            intronTuppleStr=intronTupple[0]+'\t'+intronTupple[1][16:-1]+'\t'+intronTupple[1][16:-1]+'_'+str(i+1)+'\t'+str(intronTupple[2])+'\t'+str(intronTupple[3])+'\n'
             output.write(intronTuppleStr)
 
 
@@ -70,7 +70,7 @@ class Exon:
 def main():
     # genes = {}
 
-    with open('Equus_caballus_protein_coding_gene_tx_exon.gtf') as f:
+    with open('dummy.gtf') as f:
 
         gene = None
         transcript = None
